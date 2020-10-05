@@ -24,4 +24,7 @@ public interface BorderInterface extends CrudRepository<Border,Long>
 
     List<Border> findAllByUserUsernameIgnoreCaseOrderByPostedDesc(String name);
 
+    @Query(value = "select s from Border s order by s.cars desc ")
+    Border findByCars();
+
 }

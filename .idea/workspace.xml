@@ -7,6 +7,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1YUPQYkeS6yvVmNSodGexlbzPDA" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -42,6 +45,7 @@
       <option name="presentableId" value="Default" />
       <updated>1582994183956</updated>
       <workItem from="1582994185852" duration="78000" />
+      <workItem from="1600117260144" duration="63000" />
     </task>
     <servers />
   </component>
@@ -49,21 +53,9 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582994250483">
+    <state x="709" y="336" key="FileChooserDialogImpl" timestamp="1600117320644">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582994250483" />
-    <state x="811" y="412" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1582994210989">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="811" y="412" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582994210989" />
-    <state x="540" y="178" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor" timestamp="1582994209287">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="540" y="178" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1582994209287" />
-    <state x="740" y="278" key="FileChooserDialogImpl" timestamp="1582994261976">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1582994261976" />
+    <state x="709" y="336" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600117320644" />
   </component>
 </project>

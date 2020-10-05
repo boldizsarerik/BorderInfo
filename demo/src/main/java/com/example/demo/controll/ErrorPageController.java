@@ -37,9 +37,9 @@ public class ErrorPageController implements ErrorController {
 
         model.addAttribute("timestamp",error.get("timestamp"));
         model.addAttribute("error",error.get("error"));
-        model.addAttribute("message",error.get("message"));
+        model.addAttribute("message","This page not found!");
         model.addAttribute("path",error.get("path"));
-        model.addAttribute("status",error.get("status"));
+      //  model.addAttribute("status",error.get("status"));
 
         return "detailedError";
     }

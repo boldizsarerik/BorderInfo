@@ -1,5 +1,6 @@
 package com.example.demo.controll;
 import ch.qos.logback.classic.Logger;
+import com.example.demo.domain.Border;
 import com.example.demo.domain.User;
 import com.example.demo.services.Services;
 import org.slf4j.LoggerFactory;
@@ -9,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 @Controller
 public class Controll
@@ -38,8 +40,6 @@ public class Controll
     @GetMapping(value="/")
     public String index(Model model)
     {
-       // model.addAttribute("h1","HATÁRHELYZET");
-        model.addAttribute("border_infos",borderService.getBorders());
         return "index";
     }
     @GetMapping(value="/my_borders")
@@ -52,20 +52,17 @@ public class Controll
     {
         return "statistics";
     }
+    @GetMapping(value="/my_profile")
+    public String my_profile()
+    {
+        return "my_profile";
+    }
     @GetMapping(value="/border")
     public String border(Model model)
     {
-        model.addAttribute("border_infos",borderService.getBorders());
+        model.addAttribute("border_infos",borderService.getBorder());
         return "border";
     }
-
-    @GetMapping(value="/one_border")
-    public String one_border(Model model)
-    {
-        model.addAttribute("border_infos",borderService.getBorder());
-        return "one_border";
-    }
-
     // Nem mindegy, ha name volt, akkor mindenütt name kell legyen tovább is.
     @RequestMapping("/title/{name}")
     public String searchForUser(@PathVariable(value = "name") String name, Model model) throws Exception
@@ -107,26 +104,4 @@ public class Controll
         model.addAttribute("errMessage", ex.getMessage());
         return "exceptionHandler";
     }
-
-   /* private List<Border> getBorders()
-    {
-        List<Border> border_infos = borderRepo.findAll();
-
-        Border border_info1 = new Border();
-        border_info1.setName("Asztély -> Beregsurány");
-        border_info1.setUser("Boldizsár Erik");
-        border_info1.setCars(16);
-        border_info1.setPosted(new Date());
-
-        Border border_info2 = new Border();
-        border_info2.setName("Asztély -> Beregsurány");
-        border_info2.setUser("Simon Ádám");
-        border_info2.setCars(23);
-        border_info2.setPosted(new Date());
-
-        border_infos.add(border_info1);
-        border_infos.add(border_info2);
-        return border_infos;
-    }
-    */
 }

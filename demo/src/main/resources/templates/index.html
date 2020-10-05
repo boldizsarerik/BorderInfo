@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Bootstrap CSS -->
@@ -33,20 +33,6 @@
         font-weight: bold;
         font-family: "Sitka Display";
     }
-    .star {
-        visibility:hidden;
-        font-size:35px;
-        cursor:pointer;
-    }
-    .star:before {
-        content: "\2605";
-        position: absolute;
-        visibility:visible;
-    }
-    .star:checked:before {
-        content: "\2606";
-        position: absolute;
-    }
 </style>
 <body>
 
@@ -64,9 +50,9 @@
     <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
         <ul class="navbar-nav w-100 justify-content-start">
             <a class="nav-link dropdown-toggle" href="/" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="flag-icon flag-icon-us"> </span> English</a>
+                <span class="flag-icon flag-icon-hu"> </span> Hungarian</a>
             <div class="dropdown-menu" aria-labelledby="dropdown">
-                <a class="dropdown-item" href=""><span class="flag-icon flag-icon-hu"> </span>  Hungarian</a>
+                <a class="dropdown-item" href=""><span class="flag-icon flag-icon-us"> </span>  English</a>
                 <a class="dropdown-item" href=""><span class="flag-icon flag-icon-ua"> </span>  Ukranian </a>
             </div>
         </ul>
@@ -78,10 +64,13 @@
                 <a class="nav-link" href="/statistics">Statistics</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">My profile</a>
+                <a class="nav-link" href="/my_profile">My profile</a>
             </li>
         </ul>
         <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+            <li class="nav-item" style="border-right:1px solid #84B6D0;">
+                <a class="nav-link" href="/admin">ADMIN</a>
+            </li>
             <li class="nav-item" style="border-right:1px solid #84B6D0;">
                 <form sec:authorize="isAuthenticated()" id="frmlogout2" class="form-inline">
                <a class="nav-link">Logged in, as: <span style="color:#008080;font-weight:bold" sec:authentication="name"></span> </a>
@@ -96,13 +85,21 @@
     </div>
 </nav>
 
+<div class="row align-items-center justify-content-center">
+    <a href="/" class="btn btn-outline-dark">
+        <img src="images/toUA.png" alt="Italian Trulli" height="18" width="38">
+    </a>
+    <a href="/" class="btn btn-outline-dark">
+        <img src="images/toHU.png" alt="Italian Trulli" height="18" width="38">
+    </a>
+</div>
+
 <section class="pricing py-2">
   <div class="container-fluid">
 
     <div class="card-deck justify-content-center">
       <div class="col-lg-3,5">
         <div class="card mb-5 mb-lg-5 text-center">
-            <input class="star" align="right" type="checkbox" title="bookmark page">
           <div class="card-body">
               <p class="aligncenter">
               <h4 class="display-6">
@@ -113,17 +110,19 @@
               </p>
             <hr>
             <ul class="fa-ul list-inline mx-auto justify-content-center">
-              <li><span  class="fa-li"><i class="fas fa-check"></i></span>
+              <li>
                   <img src="images/car.png" alt="Italian Trulli" height="25" width="25">
                   Autók száma: 6</li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>
+              <li>
                   <img src="images/clock.png" alt="Italian Trulli" height="25" width="25">
                   Várakozási idő: 1 óra 30 perc</li>
-              <li><span class="fa-li"><i class="fas fa-check"></i></span>Utolsó információ: 2020.03.06.</li>
+              <li><img src="images/info.svg" alt="Italian Trulli" height="25" width="25">
+                  Utolsó információ: 2020.03.06.</li>
             </ul>
+
           </div>
             <div class="progress md-progress" style="height: 7px;">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             <br>
             <a href="/border" class="btn btn-info text-uppercase">Details / Add Info</a>
@@ -131,16 +130,30 @@
         </div>
 
 
+
+
         <div class="col-lg-3,5">
             <div class="card mb-5 mb-lg-5 text-center">
                 <div class="card-body">
-                    <h4 class="display-6">Asztély -> Beregsurány</h4>
+                    <p class="aligncenter">
+                    <h4 class="display-6">
+                        <img src="images/hu.png" alt="Italian Trulli" height="25" width="25">
+                        Asztély ->
+                        <img src="images/ua.png" alt="Italian Trulli" height="25" width="25">
+                        Beregsurány</h4>
+                    </p>
                     <hr>
                     <ul class="fa-ul list-inline mx-auto justify-content-center">
-                        <li><span  class="fa-li"><i class="fas fa-check"></i></span>Autók száma: 46</li>
-                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Várakozási idő: 4 óra 15 perc</li>
-                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Utolsó információ: 2020.03.08.</li>
+                        <li>
+                            <img src="images/car.png" alt="Italian Trulli" height="25" width="25">
+                            Autók száma: 6</li>
+                        <li>
+                            <img src="images/clock.png" alt="Italian Trulli" height="25" width="25">
+                            Várakozási idő: 1 óra 30 perc</li>
+                        <li><img src="images/info.svg" alt="Italian Trulli" height="25" width="25">
+                            Utolsó információ: 2020.03.06.</li>
                     </ul>
+
                 </div>
                 <div class="progress md-progress" style="height: 7px;">
                     <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -154,14 +167,24 @@
         <div class="col-lg-3,5">
             <div class="card mb-5 mb-lg-5 text-center">
                 <div class="card-body">
-                    <h4 class="display-6">Barabás -> Kaszony</h4>
+                    <p class="aligncenter">
+                    <h4 class="display-6">
+                        <img src="images/hu.png" alt="Italian Trulli" height="25" width="25">
+                        Barabás ->
+                        <img src="images/ua.png" alt="Italian Trulli" height="25" width="25">
+                        Kaszony</h4>
+                    </p>
                     <hr>
-
                     <ul class="fa-ul list-inline mx-auto justify-content-center">
-                        <li><span  class="fa-li"><i class="fas fa-check"></i></span>Autók száma: 46</li>
-                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Várakozási idő: 4 óra 15 perc</li>
-                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Utolsó információ: 2020.03.08.</li>
+                        <li><span  class="fa-li"><i class="fas fa-check"></i></span>
+                            <img src="images/car.png" alt="Italian Trulli" height="25" width="25">
+                            Autók száma: 6</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>
+                            <img src="images/clock.png" alt="Italian Trulli" height="25" width="25">
+                            Várakozási idő: 1 óra 30 perc</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Utolsó információ: 2020.03.06.</li>
                     </ul>
+
                 </div>
                 <div class="progress md-progress" style="height: 7px;">
                     <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -171,38 +194,30 @@
             </div>
         </div>
 
-        <div class="col-lg-3,5">
-            <div class="card mb-5 mb-lg-5 text-center">
-                <div class="card-body">
-                    <h4 class="display-6">Kaszony -> Barabás</h4>
-                    <hr>
 
-                    <ul class="fa-ul list-inline mx-auto justify-content-center">
-                        <li><span  class="fa-li"><i class="fas fa-check"></i></span>Autók száma: 46</li>
-                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Várakozási idő: 4 óra 15 perc</li>
-                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Utolsó információ: 2020.03.08.</li>
-                    </ul>
-                </div>
-                <div class="progress md-progress" style="height: 7px;">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <br>
-                <a href="/border" class="btn btn-info text-uppercase">Details / Add Info</a>
-            </div>
-        </div>
 
 
         <div class="col-lg-3,5">
             <div class="card mb-5 mb-lg-5 text-center">
                 <div class="card-body">
-                    <h4 class="display-6">Záhony -> Csap</h4>
+                    <p class="aligncenter">
+                    <h4 class="display-6">
+                        <img src="images/hu.png" alt="Italian Trulli" height="25" width="25">
+                        Kaszony ->
+                        <img src="images/ua.png" alt="Italian Trulli" height="25" width="25">
+                        Barabás</h4>
+                    </p>
                     <hr>
-
                     <ul class="fa-ul list-inline mx-auto justify-content-center">
-                        <li><span  class="fa-li"><i class="fas fa-check"></i></span>Autók száma: 46</li>
-                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Várakozási idő: 4 óra 15 perc</li>
-                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Utolsó információ: 2020.03.08.</li>
+                        <li><span  class="fa-li"><i class="fas fa-check"></i></span>
+                            <img src="images/car.png" alt="Italian Trulli" height="25" width="25">
+                            Autók száma: 6</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>
+                            <img src="images/clock.png" alt="Italian Trulli" height="25" width="25">
+                            Várakozási idő: 1 óra 30 perc</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Utolsó információ: 2020.03.06.</li>
                     </ul>
+
                 </div>
                 <div class="progress md-progress" style="height: 7px;">
                     <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -212,104 +227,198 @@
             </div>
         </div>
 
-                <div class="col-lg-3,5">
-                    <div class="card mb-5 mb-lg-5 text-center">
-                        <div class="card-body">
-                            <h4 class="display-6">Csap -> Záhony</h4>
-                            <hr>
 
-                            <ul class="fa-ul list-inline mx-auto justify-content-center">
-                                <li><span  class="fa-li"><i class="fas fa-check"></i></span>Autók száma: 46</li>
-                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Várakozási idő: 4 óra 15 perc</li>
-                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Utolsó információ: 2020.03.08.</li>
-                            </ul>
-                        </div>
-                        <div class="progress md-progress" style="height: 7px;">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <br>
-                        <a href="/border" class="btn btn-info text-uppercase">Details / Add Info</a>
-                    </div>
+        <div class="col-lg-3,5">
+            <div class="card mb-5 mb-lg-5 text-center">
+                <div class="card-body">
+                    <p class="aligncenter">
+                    <h4 class="display-6">
+                        <img src="images/hu.png" alt="Italian Trulli" height="25" width="25">
+                        Tiszabecs ->
+                        <img src="images/ua.png" alt="Italian Trulli" height="25" width="25">
+                        Tiszaújlak</h4>
+                    </p>
+                    <hr>
+                    <ul class="fa-ul list-inline mx-auto justify-content-center">
+                        <li><span  class="fa-li"><i class="fas fa-check"></i></span>
+                            <img src="images/car.png" alt="Italian Trulli" height="25" width="25">
+                            Autók száma: 6</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>
+                            <img src="images/clock.png" alt="Italian Trulli" height="25" width="25">
+                            Várakozási idő: 1 óra 30 perc</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Utolsó információ: 2020.03.06.</li>
+                    </ul>
+
                 </div>
-
-
-                <div class="col-lg-3,5">
-                    <div class="card mb-5 mb-lg-5 text-center">
-                        <div class="card-body">
-                            <h4 class="display-6">Tiszabecs -> Tiszaújlak</h4>
-                            <hr>
-                            <ul class="fa-ul list-inline mx-auto justify-content-center">
-                                <li><span  class="fa-li"><i class="fas fa-check"></i></span>Autók száma: 46</li>
-                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Várakozási idő: 4 óra 15 perc</li>
-                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Utolsó információ: 2020.03.08.</li>
-                            </ul>
-                        </div>
-                        <div class="progress md-progress" style="height: 7px;">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <br>
-                        <a href="/border" class="btn btn-info text-uppercase">Details / Add Info</a>
-                    </div>
+                <div class="progress md-progress" style="height: 7px;">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
+                <br>
+                <a href="/border" class="btn btn-info text-uppercase">Details / Add Info</a>
+            </div>
+        </div>
 
-                <div class="col-lg-3,5">
-                    <div class="card mb-5 mb-lg-5 text-center">
-                        <div class="card-body">
-                            <h4 class="display-6">Tiszaújlak -> Tiszabecs</h4>
-                            <hr>
-                            <ul class="fa-ul list-inline mx-auto justify-content-center">
-                                <li><span  class="fa-li"><i class="fas fa-check"></i></span>Autók száma: 46</li>
-                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Várakozási idő: 4 óra 15 perc</li>
-                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Utolsó információ: 2020.03.08.</li>
-                            </ul>
-                        </div>
-                        <div class="progress md-progress" style="height: 7px;">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <br>
-                        <a href="/border" class="btn btn-info text-uppercase">Details / Add Info</a>
-                    </div>
+
+
+        <div class="col-lg-3,5">
+            <div class="card mb-5 mb-lg-5 text-center">
+                <div class="card-body">
+                    <p class="aligncenter">
+                    <h4 class="display-6">
+                        <img src="images/hu.png" alt="Italian Trulli" height="25" width="25">
+                        Tiszaújlak ->
+                        <img src="images/ua.png" alt="Italian Trulli" height="25" width="25">
+                        Tiszabecs</h4>
+                    </p>
+                    <hr>
+                    <ul class="fa-ul list-inline mx-auto justify-content-center">
+                        <li><span  class="fa-li"><i class="fas fa-check"></i></span>
+                            <img src="images/car.png" alt="Italian Trulli" height="25" width="25">
+                            Autók száma: 6</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>
+                            <img src="images/clock.png" alt="Italian Trulli" height="25" width="25">
+                            Várakozási idő: 1 óra 30 perc</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Utolsó információ: 2020.03.06.</li>
+                    </ul>
+
                 </div>
-
-
-                <div class="col-lg-3,5">
-                    <div class="card mb-5 mb-lg-5 text-center">
-                        <div class="card-body">
-                            <h4 class="display-6">Lónya -> Harangláb</h4>
-                            <hr>
-                            <ul class="fa-ul list-inline mx-auto justify-content-center">
-                                <li><span  class="fa-li"><i class="fas fa-check"></i></span>Autók száma: 46</li>
-                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Várakozási idő: 4 óra 15 perc</li>
-                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Utolsó információ: 2020.03.08.</li>
-                            </ul>
-                        </div>
-                        <div class="progress md-progress" style="height: 7px;">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <br>
-                        <a href="/border" class="btn btn-info text-uppercase">Details / Add Info</a>
-                    </div>
+                <div class="progress md-progress" style="height: 7px;">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
+                <br>
+                <a href="/border" class="btn btn-info text-uppercase">Details / Add Info</a>
+            </div>
+        </div>
 
 
-                <div class="col-lg-3,5">
-                    <div class="card mb-5 mb-lg-5 text-center">
-                        <div class="card-body">
-                            <h4 class="display-6">Harangláb -> Lónya</h4>
-                            <hr>
-                            <ul class="fa-ul list-inline mx-auto justify-content-center">
-                                <li><span  class="fa-li"><i class="fas fa-check"></i></span>Autók száma: 46</li>
-                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Várakozási idő: 4 óra 15 perc</li>
-                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Utolsó információ: 2020.03.08.</li>
-                            </ul>
-                        </div>
-                        <div class="progress md-progress" style="height: 7px;">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <br>
-                        <a href="/border" class="btn btn-info text-uppercase">Details / Add Info</a>
-                    </div>
+
+        <div class="col-lg-3,5">
+            <div class="card mb-5 mb-lg-5 text-center">
+                <div class="card-body">
+                    <p class="aligncenter">
+                    <h4 class="display-6">
+                        <img src="images/hu.png" alt="Italian Trulli" height="25" width="25">
+                        Záhony ->
+                        <img src="images/ua.png" alt="Italian Trulli" height="25" width="25">
+                        Csap</h4>
+                    </p>
+                    <hr>
+                    <ul class="fa-ul list-inline mx-auto justify-content-center">
+                        <li><span  class="fa-li"><i class="fas fa-check"></i></span>
+                            <img src="images/car.png" alt="Italian Trulli" height="25" width="25">
+                            Autók száma: 6</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>
+                            <img src="images/clock.png" alt="Italian Trulli" height="25" width="25">
+                            Várakozási idő: 1 óra 30 perc</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Utolsó információ: 2020.03.06.</li>
+                    </ul>
+
                 </div>
+                <div class="progress md-progress" style="height: 7px;">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <br>
+                <a href="/border" class="btn btn-info text-uppercase">Details / Add Info</a>
+            </div>
+        </div>
+
+
+
+
+        <div class="col-lg-3,5">
+            <div class="card mb-5 mb-lg-5 text-center">
+                <div class="card-body">
+                    <p class="aligncenter">
+                    <h4 class="display-6">
+                        <img src="images/hu.png" alt="Italian Trulli" height="25" width="25">
+                        Csap ->
+                        <img src="images/ua.png" alt="Italian Trulli" height="25" width="25">
+                        Záhony</h4>
+                    </p>
+                    <hr>
+                    <ul class="fa-ul list-inline mx-auto justify-content-center">
+                        <li><span  class="fa-li"><i class="fas fa-check"></i></span>
+                            <img src="images/car.png" alt="Italian Trulli" height="25" width="25">
+                            Autók száma: 6</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>
+                            <img src="images/clock.png" alt="Italian Trulli" height="25" width="25">
+                            Várakozási idő: 1 óra 30 perc</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Utolsó információ: 2020.03.06.</li>
+                    </ul>
+
+                </div>
+                <div class="progress md-progress" style="height: 7px;">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <br>
+                <a href="/border" class="btn btn-info text-uppercase">Details / Add Info</a>
+            </div>
+        </div>
+
+
+
+        <div class="col-lg-3,5">
+            <div class="card mb-5 mb-lg-5 text-center">
+                <div class="card-body">
+                    <p class="aligncenter">
+                    <h4 class="display-6">
+                        <img src="images/hu.png" alt="Italian Trulli" height="25" width="25">
+                        Lónya ->
+                        <img src="images/ua.png" alt="Italian Trulli" height="25" width="25">
+                        Harangláb</h4>
+                    </p>
+                    <hr>
+                    <ul class="fa-ul list-inline mx-auto justify-content-center">
+                        <li><span  class="fa-li"><i class="fas fa-check"></i></span>
+                            <img src="images/car.png" alt="Italian Trulli" height="25" width="25">
+                            Autók száma: 6</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>
+                            <img src="images/clock.png" alt="Italian Trulli" height="25" width="25">
+                            Várakozási idő: 1 óra 30 perc</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Utolsó információ: 2020.03.06.</li>
+                    </ul>
+
+                </div>
+                <div class="progress md-progress" style="height: 7px;">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <br>
+                <a href="/border" class="btn btn-info text-uppercase">Details / Add Info</a>
+            </div>
+        </div>
+
+
+
+
+        <div class="col-lg-3,5">
+            <div class="card mb-5 mb-lg-5 text-center">
+                <div class="card-body">
+                    <p class="aligncenter">
+                    <h4 class="display-6">
+                        <img src="images/hu.png" alt="Italian Trulli" height="25" width="25">
+                        Harangláb ->
+                        <img src="images/ua.png" alt="Italian Trulli" height="25" width="25">
+                        Lónya</h4>
+                    </p>
+                    <hr>
+                    <ul class="fa-ul list-inline mx-auto justify-content-center">
+                        <li><span  class="fa-li"><i class="fas fa-check"></i></span>
+                            <img src="images/car.png" alt="Italian Trulli" height="25" width="25">
+                            Autók száma: 6</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>
+                            <img src="images/clock.png" alt="Italian Trulli" height="25" width="25">
+                            Várakozási idő: 1 óra 30 perc</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Utolsó információ: 2020.03.06.</li>
+                    </ul>
+
+                </div>
+                <div class="progress md-progress" style="height: 7px;">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <br>
+                <a href="/border" class="btn btn-info text-uppercase">Details / Add Info</a>
+            </div>
+        </div>
 
     </div>
     </div>
