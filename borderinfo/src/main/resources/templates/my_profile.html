@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"
+	  layout:decorator="layouts/main">
+<head>
+	<title>Profil</title>
+</head>
+<body>
+		
+	<div layout:fragment="Content">
+		<h3>Saját profil</h3>
+
+		<div class="d-flex justify-content-center" >
+		<div class="card" style="width: 45rem;">
+			<div class="ml-4">
+				<div class="mt-2">
+			<img src="/images/profile.jpg" alt="Card image cap" height="60" width="60">
+			</div>
+			</div>
+			<a class="nav-link">Bejelentkezve, mint: <span style="color:#008080;font-weight:bold" sec:authentication="name"></span> </a>
+			<div class="card-body">
+				<h5 class="card-title">Információk</h5>
+				<p class="card-text">Itt tudsz beállításokat végrehajtani a felhasználói fiókoddal kapcsolatban..</p>
+			</div>
+			<ul class="list-group list-group-flush">
+				<a href="/my_borders" class="list-group-item list-group-item-action"  style="color:#008080; font-weight: 500;">Én határaim</a>
+				<a href="#" class="list-group-item list-group-item-action list-group-item-warning" style="color:#008080; font-weight: 500;" >Értékelésem</a>
+				<a href="#" class="list-group-item list-group-item-action list-group-item-info"  style="color:#008080; font-weight: 500;">Jelszó megváltoztatása</a>
+				<a class="list-group-item list-group-item-action list-group-item-danger" data-toggle="modal" data-target="#myModal" style="color:#008080; font-weight: 500;">Fiók törlése</a>
+			</ul>
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" role="dialog">
+				<div class="modal-dialog">
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title">Biztosan törölni szeretnéd a fiókodat?</h4>
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+						<div class="modal-footer">
+							<a href="/delete" type="button" class="btn btn-danger">Igen, törlés</a>
+							<button type="button" class="btn btn-light" data-dismiss="modal">Nem, vissza</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card-body">
+				<a href="#" class="card-link">Észrevétel küldése</a>
+			</div>
+		</div>
+		</div>
+
+
+	</div>
+</body>
+</html>
