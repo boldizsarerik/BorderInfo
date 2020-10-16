@@ -16,6 +16,12 @@ public class Border {
     private Long id;
 
     @Getter
+    private Long user_id;
+
+    @Getter
+    private String username;
+
+    @Getter
     private String name;
 
     @Getter
@@ -27,12 +33,31 @@ public class Border {
     @Getter
     private Date date;
 
+    @Getter
+    private boolean hu;
+
     public Border() {}
 
-    public Border(final String name, final int cars, final String waiting_time, final Date date) {
+    public Border(final Long user_id,final String username,final String name, final int cars, final String waiting_time, final Date date, boolean hu) {
+        this.user_id = user_id;
+        this.username = username;
         this.name = name;
         this.cars = cars;
         this.waiting_time = waiting_time;
         this.date = date;
+        this.hu = hu;
+    }
+
+    @Override
+    public String toString() {
+        return "Border{" +
+                "id=" + id +
+                ", user_id=" + user_id +
+                ", username='" + username + '\'' +
+                ", name='" + name + '\'' +
+                ", cars=" + cars +
+                ", waiting_time='" + waiting_time + '\'' +
+                ", date=" + date +
+                '}';
     }
 }

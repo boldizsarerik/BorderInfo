@@ -9,7 +9,7 @@ create table User
 );
 
 /* értékelés
+   kedvencek/én határaim letárolása
 Plusz tábla:
-   - Border
    - Comments
  */

@@ -11,6 +11,6 @@ public class ExceptionGeneral
 	public String exception(Exception ex, Model model)
 	{
 		model.addAttribute("exception",ex);
-		return "whateverHandlesTheException";
+		return "exception";
 	}
 }

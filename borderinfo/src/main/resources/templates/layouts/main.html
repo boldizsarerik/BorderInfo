@@ -16,6 +16,8 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://kit.fontawesome.com/ab5e7970da.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <link rel="stylesheet" type="text/css" href="path/to/chartjs/dist/Chart.min.css">
 
 </head>
@@ -73,12 +75,12 @@
         <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
             <li class="nav-item" style="border-right:1px solid #84B6D0;">
                 <form sec:authorize="isAuthenticated()" id="frmlogout2" class="form-inline">
-                    <a class="nav-link">Bejelentkezve, mint: <span style="color:#008080;font-weight:bold" sec:authentication="name"></span></a>
+                    <a class="nav-link"><i class="fas fa-user"></i>   Bejelentkezve, mint: <span style="color:#008080;font-weight:bold" sec:authentication="name"></span></a>
                 </form>
             </li>
             <li class="nav-item">
                 <form sec:authorize="isAuthenticated()" id="frmlogout" th:action="@{/logout}" method="post" class="form-inline">
-                    <a class="nav-link" href="javascript:{}" onclick="document.getElementById('frmlogout').submit(); return false;">Logout</a>
+                    <a class="nav-link" href="javascript:{}" onclick="document.getElementById('frmlogout').submit(); return false;"><i class="fas fa-sign-out-alt">    Kijelentkezés</i></a>
                 </form>
             </li>
         </ul>

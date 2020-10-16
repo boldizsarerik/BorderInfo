@@ -40,4 +40,16 @@ public class User {
         this.date = date;
         this.active = active;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", roles='" + roles + '\'' +
+                ", date=" + date +
+                ", active=" + active +
+                '}';
+    }
 }

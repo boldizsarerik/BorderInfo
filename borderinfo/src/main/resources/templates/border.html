@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      layout:decorator="layouts/main">
 <link th:href="@{css/index.css}" href="css/index.css" rel="stylesheet"/>
 <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"/>
 <head>
@@ -10,23 +11,28 @@
 </head>
 
 <body>
-<h1> Adott határ információk: </h1>
+<div layout:fragment="Content">
 
-<form th:action="@{/border}" th:object="${border}" method="post">
-    <p>cars <input type="text" th:field="*{cars}" /></p>
-    <p>Name: <input type="text" th:field="*{name}" /></p>
-    <p>Waiting tima: <input type="text" th:field="*{waiting_time}" /></p>
+    <div class="d-flex justify-content-center">
+    <form name="addborder" th:action="@{/addborder}" method="post" class="form-signin">
+        <h2 class="form-signin-heading">Add meg a határ infókat!</h2>
 
-    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
-</form>
+        <div class="form-group">
+        <label for="name">Határ neve?</label>
+        <select class="form-control" id="name" name = "name">
+            <option th:each="border : ${borders}"
+                    th:value="${border}"
+                    th:utext="${border}"/>
+        </select>
+            </div>
 
-<h1>Result</h1>
-<p th:text="'id: ' + ${border.cars}" />
-<p th:text="'content: ' + ${border.name}" />
-<a href="/border">Submit another message</a>
+        <input type="text" id="cars" name="cars" class="form-control" placeholder="Hány autó áll a sorban?" />
+        <input type="text" id="waiting_time" name="waiting_time" class="form-control" placeholder="Várakozási idő?" />
+        <hr>
+        <button class="btn btn-success btn-block" type="submit">Beküldés</button>
+    </form>
+        </div>
 
-</hr>
-</article>
-
+    </div>
 </body>
 </html>
