@@ -1,26 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ef924e7-9116-46b6-9dc6-ecab822f4122" name="Default Changelist" comment="" />
+    <list default="true" id="cf558478-1f94-4b56-8999-3334944a7027" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="borderdb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="borderdb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="border: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="borderdb: schema" type="ebfa3cd1:MariaImplModel$Schema" />
+        <item name="user: table" type="dbc44a63:MariaImplModel$Table" />
+      </path>
+    </expand>
+    <select />
   </component>
-  <component name="ProjectId" id="1YUPQYkeS6yvVmNSodGexlbzPDA" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1iVz3p1kLy2Ieygk7PcDdi5dy5j" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/demo/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.application.borderinfo.repository" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Boldizsar Erik\Desktop\borderinfo\borderinfo\src\main\resources\templates" />
+      <recent name="C:\Users\Boldizsar Erik\Desktop\borderinfo\borderinfo\src\main\resources\sql" />
+      <recent name="C:\Users\Boldizsar Erik\Desktop\borderinfo\borderinfo\src\main\java\com\application\borderinfo\controller" />
+      <recent name="C:\Users\Boldizsar Erik\Desktop\borderinfo\borderinfo\src\main\resources\templates\layouts" />
+      <recent name="C:\Users\Boldizsar Erik\Desktop\borderinfo\borderinfo\src\main\resources\static\css" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="BorderinfoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="borderinfo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.application.borderinfo.BorderinfoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -39,13 +114,28 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4ef924e7-9116-46b6-9dc6-ecab822f4122" name="Default Changelist" comment="" />
-      <created>1582994183956</created>
+      <changelist id="cf558478-1f94-4b56-8999-3334944a7027" name="Default Changelist" comment="" />
+      <created>1602007350050</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1582994183956</updated>
-      <workItem from="1582994185852" duration="78000" />
-      <workItem from="1600117260144" duration="63000" />
+      <updated>1602007350050</updated>
+      <workItem from="1602007351735" duration="1782000" />
+      <workItem from="1602009224599" duration="1913000" />
+      <workItem from="1602016984725" duration="4239000" />
+      <workItem from="1602062658615" duration="4920000" />
+      <workItem from="1602108277409" duration="586000" />
+      <workItem from="1602173644244" duration="1154000" />
+      <workItem from="1602500174882" duration="497000" />
+      <workItem from="1602500824257" duration="1000000" />
+      <workItem from="1602528500878" duration="11148000" />
+      <workItem from="1602575276637" duration="25296000" />
+      <workItem from="1602613199470" duration="625000" />
+      <workItem from="1602710874957" duration="1258000" />
+      <workItem from="1602759940421" duration="889000" />
+      <workItem from="1602785770957" duration="540000" />
+      <workItem from="1603032984543" duration="830000" />
+      <workItem from="1603113840305" duration="477000" />
+      <workItem from="1603114451448" duration="39000" />
     </task>
     <servers />
   </component>
@@ -53,9 +143,81 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="709" y="336" key="FileChooserDialogImpl" timestamp="1600117320644">
+    <state x="690" y="278" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1602578802792">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="709" y="336" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1600117320644" />
+    <state x="690" y="278" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602578802792" />
+    <state x="552" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602008241172">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="182" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602008241172" />
+    <state x="733" y="227" key="#com.intellij.ide.util.MemberChooser" timestamp="1602584500127">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="733" y="227" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602584500127" />
+    <state x="740" y="278" key="FileChooserDialogImpl" timestamp="1603114486907">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603114486907" />
+    <state width="1877" height="179" key="GridCell.Tab.0.bottom" timestamp="1603114317510">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="179" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603114317510" />
+    <state width="1877" height="179" key="GridCell.Tab.0.center" timestamp="1603114317510">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="179" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603114317510" />
+    <state width="1877" height="179" key="GridCell.Tab.0.left" timestamp="1603114317510">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="179" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603114317510" />
+    <state width="1877" height="179" key="GridCell.Tab.0.right" timestamp="1603114317510">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="179" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603114317510" />
+    <state width="1877" height="179" key="GridCell.Tab.1.bottom" timestamp="1603114317510">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="179" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603114317510" />
+    <state width="1877" height="179" key="GridCell.Tab.1.center" timestamp="1603114317510">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="179" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603114317510" />
+    <state width="1877" height="179" key="GridCell.Tab.1.left" timestamp="1603114317510">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="179" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603114317510" />
+    <state width="1877" height="179" key="GridCell.Tab.1.right" timestamp="1603114317510">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="179" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603114317510" />
+    <state width="1877" height="348" key="GridCell.Tab.2.bottom" timestamp="1602021285411">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602021285411" />
+    <state width="1877" height="348" key="GridCell.Tab.2.center" timestamp="1602021285411">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602021285411" />
+    <state width="1877" height="348" key="GridCell.Tab.2.left" timestamp="1602021285411">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602021285411" />
+    <state width="1877" height="348" key="GridCell.Tab.2.right" timestamp="1602021285411">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602021285411" />
+    <state x="834" y="273" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1602008297214">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="834" y="273" key="com.intellij.database.view.ui.DbObjectDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602008297214" />
+    <state x="702" y="155" key="refactoring.ChangeSignatureDialog" timestamp="1602584029524">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="702" y="155" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602584029524" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1602067105328">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602067105328" />
   </component>
 </project>

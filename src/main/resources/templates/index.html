@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Bootstrap CSS -->
+    <link th:href="@{css/index.css}" href="index.css" rel="stylesheet"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/ab5e7970da.js" crossorigin="anonymous"></script>
+
+    <title>Border Info</title>
+</head>
+<style>
+    body
+    {
+        background-color: #E7FFF7;
+    }
+    h4 {
+        color: #008080;
+        display: block;
+        font-size: 1.4em;
+        margin-top: 0.67em;
+        margin-bottom: 0.67em;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
+        font-family: "Sitka Display";
+    }
+</style>
+<body>
+
+<a href="/"  style="color:#008080;; text-decoration:none" >
+    <h1 class="display-4">Border Info</h1>
+</a>
+
+<nav class="navbar navbar-light navbar-expand-xl bg-faded">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
+        <span class="navbar-toggler-icon">
+        </span>
+    </button>
+</nav>
+<nav class="navbar navbar-light navbar-expand-xl bg-faded justify-content-center font-weight-bold">
+    <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+        <ul class="navbar-nav w-100 justify-content-start">
+            <a class="nav-link dropdown-toggle" href="/" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="flag-icon flag-icon-hu"> </span> Hungarian</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown">
+                <a class="dropdown-item" href=""><span class="flag-icon flag-icon-us"> </span>  English</a>
+                <a class="dropdown-item" href=""><span class="flag-icon flag-icon-ua"> </span>  Ukranian </a>
+            </div>
+        </ul>
+        <ul class="navbar-nav w-100 justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link" href="/my_borders">Én határaim</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/statistics">Statisztikák</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/my_profile">Saját profil</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+            <li class="nav-item" style="border-right:1px solid #84B6D0;">
+                <a class="nav-link" href="/admin">ADMIN</a>
+            </li>
+            <li class="nav-item" style="border-right:1px solid #84B6D0;">
+                <form sec:authorize="isAuthenticated()" id="frmlogout2" class="form-inline">
+                    <a class="nav-link"><i class="fas fa-user"></i>   Bejelentkezve, mint: <span style="color:#008080;font-weight:bold" sec:authentication="name"></span> </a>
+                </form>
+            </li>
+            <li class="nav-item">
+                <form sec:authorize="isAuthenticated()" id="frmlogout" th:action="@{/logout}" method="post" class="form-inline">
+                    <a class="nav-link" href="javascript:{}" onclick="document.getElementById('frmlogout').submit(); return false;"><i class="fas fa-sign-out-alt">    Kijelentkezés</i></a>
+                </form>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="d-flex justify-content-center">
+    <form th:action="@{/filterUa}" method="post">
+        <button class="btn btn-outline-dark">
+            <img src="images/toUA.png" alt="Italian Trulli" height="18" width="38">
+        </button>
+    </form>
+    <form th:action="@{/filterHu}" method="post">
+        <button  class="btn btn-outline-dark">
+            <img src="images/toHU.png" alt="Italian Trulli" height="18" width="38">
+        </button>
+    </form>
+</div>
+
+<div th:if="${info}" class="alert alert-success d-flex justify-content-center">Köszönjük az információt!</div>
+
+<section class="pricing py-2">
+    <div class="container-fluid">
+        <div class="card-deck justify-content-center">
+
+            <div th:each="border: ${borders}">
+
+            <div class="col-lg-3,5">
+                <div class="card mb-5 mb-lg-5 text-center">
+                    <div class="card-body">
+                        <p class="aligncenter" style="display:inline">
+                            <img th:if="${!border.isHu()}"  src="images/ua.png" alt="Italian Trulli" height="25" width="25">
+                            <img th:if="${border.isHu()}" src="images/hu.png" alt="Italian Trulli" height="25" width="25">
+                        <h4 style="display:inline" class="display-6" th:text="${border.name}"></h4>
+                        <img th:if="${border.isHu()}"  src="images/ua.png" alt="Italian Trulli" height="25" width="25">
+                        <img th:if="${!border.isHu()}" src="images/hu.png" alt="Italian Trulli" height="25" width="25">
+                        </p>
+                        <hr>
+                        <ul class="fa-ul list-inline mx-auto justify-content-center">
+                            <li>
+                                <img src="images/car.png" alt="Italian Trulli" height="25" width="25">  Autók száma:
+                               <p style="display:inline" th:text="${border.cars}"></p>
+                            <li>
+                                <img src="images/clock.png" alt="Italian Trulli" height="25" width="25">  Várakozási idő:
+                                <p style="display:inline" th:text="${border.waiting_time}"></p></li>
+                            <li><img src="images/info.svg" alt="Italian Trulli" height="25" width="25">  Utolsó infó:
+                                <p style="display:inline" th:text="${#dates.format(border.date, 'yyyy MMM dd, HH:mm')}"></p></li>
+                        </ul>
+                    </div>
+                    <div th:if="${border.cars <= 30}" class="progress md-progress" style="height: 7px;">
+                        <div id="progress" class="progress-bar bg-success" role="progressbar" style="height: 10px;" th:style="'width:'+ ${border.cars}+'%;'" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div th:if="${border.cars > 30 && border.cars < 60}" class="progress md-progress" style="height: 7px;">
+                        <div id="progress2" class="progress-bar bg-warning" role="progressbar" style="height: 10px;" th:style="'width:'+ ${border.cars}+'%;'" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div th:if="${border.cars >= 60}" class="progress md-progress" style="height: 7px;">
+                        <div id="progress3" class="progress-bar bg-danger" role="progressbar" style="height: 10px;" th:style="'width:'+ ${border.cars}+'%;'" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <br>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <form th:action="@{/borderinfos}" method="post">
+                            <button name="bordername" th:value="${border.name}" class="btn2 btn-info text-uppercase">Részletek</button>
+                        </form>
+                        <a href="/border" class="btn btn-info text-uppercase">Információ megadása</a>
+                    </div>
+                </div>
+            </div>
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+</section>
+
+<br>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
