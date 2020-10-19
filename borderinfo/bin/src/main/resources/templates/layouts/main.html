@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.w3.org/1999/xhtml">
+<link th:href="@{css/index.css}" href="css/index.css" rel="stylesheet"/>
+<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"/>
+
+<head>
+    <title>Border Info</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Bootstrap CSS -->
+    <link th:href="@{css/index.css}" href="css/index.css" rel="stylesheet"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://kit.fontawesome.com/ab5e7970da.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="path/to/chartjs/dist/Chart.min.css">
+
+</head>
+<style>
+    body
+    {
+        background-color: #E7FFF7;
+    }
+    h3 {
+        text-align: center;
+        color: #008080;
+        display: block;
+        font-size: 1.4em;
+        margin-top: 0.67em;
+        margin-bottom: 0.67em;
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
+        font-family: "Sitka Display";
+    }
+</style>
+<body>
+
+<a href="/"  style="color:#008080;; text-decoration:none" >
+    <h1 class="display-4">Border Info</h1>
+</a>
+
+<nav class="navbar navbar-light navbar-expand-xl bg-faded">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
+        <span class="navbar-toggler-icon">
+        </span>
+    </button>
+</nav>
+<nav class="navbar navbar-light navbar-expand-xl bg-faded justify-content-center font-weight-bold">
+    <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+        <ul class="navbar-nav w-100 justify-content-start">
+            <a class="nav-link dropdown-toggle" href="/" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="flag-icon flag-icon-hu"> </span> Hungarian</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown">
+                <a class="dropdown-item" href=""><span class="flag-icon flag-icon-us"> </span>  English</a>
+                <a class="dropdown-item" href=""><span class="flag-icon flag-icon-ua"> </span>  Ukranian </a>
+            </div>
+        </ul>
+        <ul class="navbar-nav w-100 justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link" href="/my_borders">Én határaim</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/statistics">Statisztikák</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/my_profile">Saját profil</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+            <li class="nav-item" style="border-right:1px solid #84B6D0;">
+                <form sec:authorize="isAuthenticated()" id="frmlogout2" class="form-inline">
+                    <a class="nav-link"><i class="fas fa-user"></i>   Bejelentkezve, mint: <span style="color:#008080;font-weight:bold" sec:authentication="name"></span></a>
+                </form>
+            </li>
+            <li class="nav-item">
+                <form sec:authorize="isAuthenticated()" id="frmlogout" th:action="@{/logout}" method="post" class="form-inline">
+                    <a class="nav-link" href="javascript:{}" onclick="document.getElementById('frmlogout').submit(); return false;"><i class="fas fa-sign-out-alt">    Kijelentkezés</i></a>
+                </form>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div layout:fragment="Content">
+		</div>
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
+</body>
+</html>
